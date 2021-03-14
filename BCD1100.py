@@ -20,7 +20,25 @@ class Display:
                 STR2 = " "+STR2+" "
         
         output = STR1 + STR2
-        self.SerialPort.write(bytes(output, "utf-8"))        
+        self.SerialPort.write(bytes(output, "utf-8"))
+
+    def printLeft(self, STR1, STR2):
+        while(len(STR1) < 20 ):
+            STR1 += " "
+        while(len(STR2) < 20 ):
+            STR2 += " "
+
+        output = STR1 + STR2
+        self.SerialPort.write(bytes(output, "utf-8"))
+
+    def printRight(self, STR1, STR2):
+        while(len(STR1) < 20 ):
+            STR1 = " " + STR1
+        while(len(STR2) < 20 ): 
+            STR2 = " " + STR2
+        
+        output = STR1 + STR2
+        self.SerialPort.write(bytes(output, "utf-8"))  
 
     def close(self):
         self.SerialPort.close()
