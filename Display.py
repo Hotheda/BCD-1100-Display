@@ -12,6 +12,6 @@ while( (output1 == "") or (len(output1) > 20 ) ):
 while( (output2 == "") or (len(output2) > 20 ) ): 
     output2 = input("Skriv nåt: ")
 
-myDisplay.printRight(output1, output2)
+myDisplay.printCenter(output1, output2)
 
 myDisplay.close()
