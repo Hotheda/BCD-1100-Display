@@ -1,6 +1,8 @@
 import serial
 import time
 
+SERIALPORT = "COM7"
+
 output1 = ""
 output2 = ""
 while( (output1 == "") or (len(output1) > 20 ) ): 
@@ -23,7 +25,7 @@ print("Lenght string 1: " + str(len(output1)) )
 print("Lenght string 2: " + str(len(output2)) )
 
 
-serPort = serial.Serial("COM7", 19200)
+serPort = serial.Serial(SERIALPORT, 19200)
 serPort.close()
 serPort.open()
 
